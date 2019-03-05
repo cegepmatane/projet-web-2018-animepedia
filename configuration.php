@@ -15,7 +15,7 @@ class BaseDeDonnees {
     public static function getInstance() {
         if (!isset(self::$instance)) {
             $pdo_options[PDO::ATTR_ERRMODE] = PDO::ERRMODE_EXCEPTION;
-            self::$instance = new PDO(TYPEBDD . ':host=' . HOTEBDD . ';dbname='. NOMBDD .';charset=' . ENCODAGE, 'animepedao77', 'Ccleaner77', $pdo_options);
+            self::$instance = new PDO(TYPEBDD . ':host=' . HOTEBDD . ';dbname='. NOMBDD .';charset=' . ENCODAGE, '', '', $pdo_options);
             if(self::$instance == NULL)
                 echo('Erreur de connexion');
         }
